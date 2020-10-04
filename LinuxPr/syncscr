@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Please, give me first directory: "
+read dir1
+echo "Please, give me second directory: "
+read dir2
+
+if ! [ -d $dir1 ];
+then
+echo "Didn't find $dir1 directory! Suggest you to specify the path or create such directory"
+elif ! [ -d $dir2 ];
+then 
+echo "Didn't find $dir2 directory! Suggest you to specify the path or create such directory\n"
+else 
+for file in $dir1/*
+do
+cp -n -r $file $dir2
+done
+for file in $dir2/*
+do
+cp -r -n $file $dir1
+done
+echo "Well done"
+fi
