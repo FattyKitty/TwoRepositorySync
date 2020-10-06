@@ -2,6 +2,7 @@
 
 #dir1 - flash directory, moving files from there
 #dir2 - directory on machine. Moving files into this directory
+#not finished
 
 
 CheckFiles()
